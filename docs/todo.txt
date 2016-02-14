@@ -1,0 +1,42 @@
+SpaceSim:
+
+=======
+FIX:
+=======
+- Engine should not write force output when not burning
+- Engine should only consume small amount when not burning
+- Reactor should not have unlimited supply pr turn (should be similar to power buffer)
+- don't recalculate acc with energy unchanged
+
+=======
+NEW:
+=======
++ add energy buffer
++ add engine burn / retroburn (secs)
+- engine will use only 5% energy when not burning.
+
+(add STATE to both reactor and engine)
+	
+
+- add thrusters to automatically adjust for speed [x,y,z]
+	! so cmd "THRUSTERS SPEED [0,0,0]"
+	! thrusters will have capability of 1 GW or something
+
+- (add destination + estimated time to target + direction)
+
+- add engine auto course adjust [destination, speed] (set direction + required burn)
+
+- add other screens + navigation buttons on righthand side
+
+- small navigation scenario
+	- new navigation screen
+	- direction
+	- thrusters (align speed / stop)
+	- destination
+	- radar
+
+
+- Thrusters
+	- maxEnergy (like engine)
+	- level (from vesselpart)
+	- direction
